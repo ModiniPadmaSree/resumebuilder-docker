@@ -18,7 +18,8 @@ app.use(
     origin: (origin, callback) => {
       const allowedOrigins = [
         'http://localhost:3000',
-        'https://resume-builder-pi-khaki.vercel.app'
+        'https://resume-builder-pi-khaki.vercel.app',
+        'http://18.206.149.33:3000'
       ];
 
       // allow non-browser requests (Postman, Docker, server-to-server)
