@@ -56,9 +56,9 @@ To make images and portable, run in any environment(EC2, Kubernetes)
  Docker-Compose configuration was updated to pull images from hub
 
   ---
-## Step 7: : Configure Frontend–Backend Connectivity
+## Step 7: Configure Frontend–Backend Connectivity
 
-  To connect forntend & backend : 
+  To connect frontend & backend : 
   - Backend URL (ip-of-instance:5000) was added to .env of frontend
   - Backend CORS origin is updated to allow requests from forntend
  
