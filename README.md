@@ -41,32 +41,31 @@ docker ps
 ---
 ## Step 5: Push images to docker hub 
 
-To make images and portable, run in any environment(EC2, Kubernetes) \
+To make images and portable, run in any environment(EC2, Kubernetes) 
 - Tag existing images with Docker hub username and repository name \
   docker images \
   docker tag resume-builder-frontend:latest modinipadmasree/resume-builder-frontend:latest \
-  docker tag resume-builder-backend:latest modinipadmasree/resume-builder-backend:latest \
+  docker tag resume-builder-backend:latest modinipadmasree/resume-builder-backend:latest 
 - Push images to hub \
   docker login \
   docker push modinipadmasree/resume-builder-frontend:latest \
   docker push modinipadmasree/resume-builder-backend:latest
 
   ---
-  ## Step 6: Update docker-compose
-
-  Docker-Compose configuration was updated to pull images from hub \
+## Step 6: Update docker-compose
+ Docker-Compose configuration was updated to pull images from hub
 
   ---
-  ## Step 7: : Configure Frontend–Backend Connectivity
+## Step 7: : Configure Frontend–Backend Connectivity
 
-  To connect forntend & backend : \
+  To connect forntend & backend : 
   - Backend URL (ip-of-instance:5000) was added to .env of frontend
   - Backend CORS origin is updated to allow requests from forntend
  
  ---
- ## Step 8: Rebuild and restart containers
+## Step 8: Rebuild and restart containers
 
- After updates rebuild the iamges and restart the containers \ 
+ After updates rebuild the iamges and restart the containers 
  - docker compose down
  - docker compose up --build -d
 Updated images were pushed again to docker hub
